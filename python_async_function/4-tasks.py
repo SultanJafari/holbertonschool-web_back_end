@@ -3,11 +3,12 @@
 
 import asyncio
 
+
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> list[float]:
-    """Run wait_random multiple times."""
+    """Run task_wait_n and max - n ."""
     tasks = [task_wait_random(max_delay) for _ in range(n)]
     results = []
 
