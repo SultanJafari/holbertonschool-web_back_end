@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-"""Async generator module andpython_async_comprehension."""
+"""Measure the runtime of async comprehensions."""
 
-import time
 import asyncio
+import time
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
-    """task of  2-measure_runtime.py"""
+    """Measure the execution time of four concurrent comprehensions."""
     start = time.time()
     await asyncio.gather(
         async_comprehension(),
         async_comprehension(),
         async_comprehension(),
         async_comprehension()
-        )
+    )
     end = time.time()
-    total_time = end - start
-    return total_time
+    return end - start
