@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Async generator module andpython_async_comprehension."""
 
-import asyncio
-import random
 from typing import List
 
 
